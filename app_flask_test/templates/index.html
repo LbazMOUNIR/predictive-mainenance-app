@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Capgemini Predective maintenance</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>MAINTENANCE PERDICTIVE </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="BAROMETRIC_PRESSURE" placeholder="BAROMETRIC_PRESSURE" required="required" />
+        <input type="text" name="ENGINE_COOLANT_TEMP" placeholder="ENGINE_COOLANT_TEMP" required="required" />
+		<input type="text" name="FUEL_LEVEL" placeholder="FUEL_LEVEL"required="required" />
+		<input type="text" name="ENGINE_LOAD" placeholder="ENGINE_LOAD" required="required" />
+        <input type="text" name="AMBIENT_AIR_TEMP" placeholder="AMBIENT_AIR_TEMP" required="required" />
+        <input type="text" name="ENGINE_RPM" placeholder="ENGINE_RPM" required="required" />
+        <input type="text" name="INTAKE_MANIFOLD_PRESSURE" placeholder="INTAKE_MANIFOLD_PRESSURE" required="required" />
+        <input type="text" name="MAF" placeholder="MAF" required="required" />
+        <input type="text" name="AIR_INTAKE_TEMP" placeholder="AIR_INTAKE_TEMP" required="required" />
+        <input type="text" name="SPEED" placeholder="SPEED" required="required" />
+        <input type="text" name="SHORT_TERM_FUEL_TRIM_BANK_1" placeholder="SHORT_TERM_FUEL_TRIM_BANK_1" required="required" />
+        <input type="text" name="ENGINE_RUNTIM" placeholder="ENGINE_RUNTIM" required="required" />
+        <input type="text" name="THROTTLE_POS" placeholder="THROTTLE_POS" required="required" />
+        <input type="text" name='DTC_NUMBER' placeholder='DTC_NUMBER' required="required" />
+        <input type="text" name='TROUBLE_CODES' placeholder='TROUBLE_CODES' required="required" />
+        <input type="text" name="TIMING_ADVANCE" placeholder="TIMING_ADVANCE" required="required" />
+
+        <input type="text" name="EUIV_RATIO" placeholder="EUIV_RATIO" required="required" />
+        
+
+        <br></br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+<style>
+  body {background: #c0c0c0}
+</style>
+</html>
