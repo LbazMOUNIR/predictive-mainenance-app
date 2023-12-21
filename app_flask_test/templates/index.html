@@ -9,11 +9,47 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+<style>
+  body {
+    background-image: url('static/predictive-maintenance-system.jpg');
+    background-size: cover;
+    }
+  input[type=submit]{
+      background-color: #4dc3ff;
+      border: 2px;
+      color: rgb(148, 188, 235);
+      padding: 8px 8px;
+      cursor: pointer;
+      margin-top: 15px;
+  }
+  .main{
+      position: fixed;
+      top: 50%; /* Adjust as needed */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      background-color:#c1d3f3;
+      opacity: 0.8;
+      border-radius: 10px;
+      align-items: center;
+      padding: 1%;
+  }
+  button[type=submit] {
+    background-color: #7c7a7a;
+    border-radius: 8px;
+    color: white;
+    padding: 16px 32px;
+    cursor: pointer;
+    margin-top: 80;
+    
+}
+</style>
+
+
 </head>
 
 <body>
- <div class="login">
+ <div align="center" class="main">
 	<h1>MAINTENANCE PERDICTIVE </h1>
 
      <!-- Main Input For Receiving Query to our ML -->
@@ -50,7 +86,5 @@
 
 
 </body>
-<style>
-  body {background: #c0c0c0}
-</style>
+
 </html>
